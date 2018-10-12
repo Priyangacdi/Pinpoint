@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title> OTP </title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="register_style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="validation.js" type="text/javascript"> </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  </head>
+  <body class="body">
+    <div class="col-lg-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <nav class="fixed-top navbar nav">
+        <a href="#"> <img class="logo" src="logo.png" /> </a>
+        <a href="#"><h3 class="pin"> PINPOINT </h3> </a>
+      </nav>
+    </div>
+    <div class="row">
+      <div class="col-sm-7">
+        <img src="otpbg.jpeg" class="register-bg" />
+      </div>
+      <div class="col-sm-5">
+        <form name="otp-form" onsubmit="return(otp_valid());">
+          <div class="form-group row otp-form">
+            <div class="col-sm-1"> </div>
+            <label for="otp" class="col-sm-3 col-form-label">Enter OTP</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="otp" placeholder="Enter OTP" onblur="otp_valid();">
+              <div id="otp_error"> </div>
+            </div>
+          </div>
+          <div align="center" class="form-group row">
+            <div class="col-sm-3"> </div>
+            <div class="col-sm-3">
+              <button type="submit" class="btn btn-bg">Resend</button>
+            </div>
+            <div class="col-sm-3">
+              <button type="submit" class="btn btn-bg" onclick="otp_valid();">Next</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
